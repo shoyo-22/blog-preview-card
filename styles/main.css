@@ -1,0 +1,129 @@
+:root {
+  --white: #fff;
+  --yellow: #f4d04e;
+  --gray-500: #6b6b6b;
+  --gray-950: #111111;
+
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-150: 12px;
+  --spacing-300: 24px;
+
+  --font-family-figtree: "Figtree", sans-serif;
+  --font-medium: 500;
+  --font-extra-bold: 800;
+
+  --border-radius-xs: 4px;
+  --border-radius-sm: 10px;
+  --border-radius-lg: 20px;
+  --box-shadow: 8px 8px rgba(0, 0, 0);
+
+  --transition-duration: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--yellow);
+
+  font-family: var(--font-family-figtree);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  max-width: 384px;
+
+  border: 1px solid var(--gray-950);
+
+  border-radius: var(--border-radius-lg);
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.card__container {
+  padding: var(--spacing-300);
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+  border-radius: var(--border-radius-sm);
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-150);
+  margin: var(--spacing-300) 0;
+}
+
+.card__category,
+.card__date,
+.card__title,
+.card__description {
+  line-height: 1.5;
+}
+
+.card__category,
+.card__author-name {
+  font-size: 14px;
+  font-weight: var(--font-extra-bold);
+  color: var(--gray-950);
+}
+
+.card__category {
+  width: max-content;
+  padding: var(--spacing-50) var(--spacing-150);
+  border-radius: var(--border-radius-xs);
+  background-color: var(--yellow);
+}
+
+.card__date {
+  font-size: 14px;
+  font-weight: var(--font-medium);
+  color: var(--gray-950);
+}
+
+.card__title {
+  font-size: 24px;
+  font-weight: var(--font-extra-bold);
+  color: var(--gray-950);
+  transition: color var(--transition-duration);
+}
+
+.card__title:hover {
+  cursor: pointer;
+  color: var(--yellow);
+}
+
+.card__description {
+  font-size: 16px;
+  font-weight: var(--font-medium);
+  color: var(--gray-500);
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+}
+
+.card__author-avatar {
+  width: 32px;
+  height: 32px;
+}
